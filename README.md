@@ -1,0 +1,2 @@
+# FunGames
+Fun simple games.
