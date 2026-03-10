@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arcade Nook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">AN</span>
+      <div>
+        <p class="brand-title">Arcade Nook</p>
+        <p class="brand-subtitle">Curated games, ready to play.</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#games">Games</a>
+      <a href="#spotlight">Spotlight</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Your mini arcade</p>
+        <h1>Pick a game, press play, and settle in.</h1>
+        <p class="lede">
+          A simple shelf for fast, cozy games. We are starting small with
+          Tic Tac Toe and growing the collection from there.
+        </p>
+        <div class="hero-actions">
+          <button class="primary" type="button" id="ttt-cta">Start with Tic Tac Toe</button>
+          <button class="ghost" type="button">Suggest a game</button>
+        </div>
+      </div>
+      <div class="hero-panel" aria-hidden="true">
+        <div class="panel-header">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="panel-title">Arcade Queue</span>
+        </div>
+        <div class="panel-body">
+          <div class="queue-item active">
+            <span class="badge">Now</span>
+            <div>
+              <p class="queue-title">Tic Tac Toe</p>
+              <p class="queue-subtitle">Two-player classic</p>
+            </div>
+          </div>
+          <div class="queue-item">
+            <span class="badge muted">Soon</span>
+            <div>
+              <p class="queue-title">Snake Sprint</p>
+              <p class="queue-subtitle">In design</p>
+            </div>
+          </div>
+          <div class="queue-item">
+            <span class="badge muted">Soon</span>
+            <div>
+              <p class="queue-title">Sky Blocks</p>
+              <p class="queue-subtitle">In design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="section">
+      <div class="section-header">
+        <h2>Game Shelf</h2>
+        <p>Each game tile is a quick doorway into play.</p>
+      </div>
+      <div class="game-grid">
+        <article class="game-card">
+          <div class="game-header">
+            <div>
+              <h3>Tic Tac Toe</h3>
+              <p>Classic three-in-a-row duel.</p>
+            </div>
+            <span class="pill">Ready</span>
+          </div>
+          <div class="game-preview">
+            <div class="mini-grid">
+              <span>X</span><span></span><span>O</span>
+              <span></span><span>X</span><span></span>
+              <span>O</span><span></span><span></span>
+            </div>
+          </div>
+          <div class="tictactoe">
+            <div class="ttt-header">
+              <p class="ttt-status" id="ttt-status">Player X, your move.</p>
+              <button class="ghost ttt-reset" id="ttt-reset" type="button">Reset</button>
+            </div>
+            <div class="ttt-grid" id="ttt-grid" role="grid" aria-label="Tic Tac Toe board">
+              <button class="ttt-cell" data-index="0" role="gridcell" aria-label="Row 1 Column 1"></button>
+              <button class="ttt-cell" data-index="1" role="gridcell" aria-label="Row 1 Column 2"></button>
+              <button class="ttt-cell" data-index="2" role="gridcell" aria-label="Row 1 Column 3"></button>
+              <button class="ttt-cell" data-index="3" role="gridcell" aria-label="Row 2 Column 1"></button>
+              <button class="ttt-cell" data-index="4" role="gridcell" aria-label="Row 2 Column 2"></button>
+              <button class="ttt-cell" data-index="5" role="gridcell" aria-label="Row 2 Column 3"></button>
+              <button class="ttt-cell" data-index="6" role="gridcell" aria-label="Row 3 Column 1"></button>
+              <button class="ttt-cell" data-index="7" role="gridcell" aria-label="Row 3 Column 2"></button>
+              <button class="ttt-cell" data-index="8" role="gridcell" aria-label="Row 3 Column 3"></button>
+            </div>
+          </div>
+          <div class="game-meta">
+            <div>
+              <p class="meta-label">Players</p>
+              <p class="meta-value">2</p>
+            </div>
+            <div>
+              <p class="meta-label">Mood</p>
+              <p class="meta-value">Friendly</p>
+            </div>
+            <div>
+              <p class="meta-label">Length</p>
+              <p class="meta-value">2-5 min</p>
+            </div>
+          </div>
+          <button class="primary full" type="button" id="ttt-focus">Play Tic Tac Toe</button>
+        </article>
+
+        <article class="game-card muted">
+          <div class="game-header">
+            <div>
+              <h3>Next Drop</h3>
+              <p>More games land here soon.</p>
+            </div>
+            <span class="pill ghost">Coming</span>
+          </div>
+          <div class="empty-state">
+            <p>Drop in your wishlist. We are building the arcade together.</p>
+          </div>
+          <button class="ghost full" type="button">Request a game</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="spotlight" class="section spotlight">
+      <div>
+        <h2>Spotlight</h2>
+        <p>
+          Tic Tac Toe keeps it simple: a 3x3 grid, two players, and a
+          race to line up three marks. Great for quick breaks and
+          friendly rivalries.
+        </p>
+      </div>
+      <div class="spotlight-card">
+        <p class="spotlight-title">How to win</p>
+        <ul>
+          <li>Claim the center early.</li>
+          <li>Set up double threats on your second move.</li>
+          <li>Block instantly when you see two in a row.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="about" class="footer">
+    <div>
+      <p class="footer-title">Arcade Nook</p>
+      <p>Built for playful moments and quick matches.</p>
+    </div>
+    <p class="footer-note">© <span id="year"></span> Arcade Nook</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
