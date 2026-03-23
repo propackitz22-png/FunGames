@@ -325,6 +325,18 @@ button:hover {
   height: 48px;
 }
 
+.mini-grid.mini-snake span {
+  background: rgba(34, 32, 32, 0.08);
+}
+
+.mini-grid.mini-snake .snake-preview {
+  background: var(--ink);
+}
+
+.mini-grid.mini-snake .food-preview {
+  background: var(--mint);
+}
+
 .tictactoe {
   display: grid;
   gap: 12px;
@@ -383,6 +395,96 @@ button:hover {
 .ttt-cell.win {
   background: rgba(231, 111, 81, 0.2);
   border-color: rgba(231, 111, 81, 0.6);
+}
+
+.snake {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(231, 111, 81, 0.08);
+}
+
+.snake-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.snake-status {
+  font-weight: 600;
+}
+
+.snake-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.snake-toggle,
+.snake-reset {
+  padding: 8px 16px;
+}
+
+.snake-board {
+  --snake-size: 20;
+  display: grid;
+  grid-template-columns: repeat(var(--snake-size), minmax(12px, 1fr));
+  gap: 4px;
+  padding: 10px;
+  border-radius: 16px;
+  background: rgba(34, 32, 32, 0.06);
+}
+
+.snake-cell {
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid rgba(34, 32, 32, 0.05);
+}
+
+.snake-cell.snake {
+  background: var(--ink);
+}
+
+.snake-cell.head {
+  background: var(--accent);
+}
+
+.snake-cell.food {
+  background: var(--mint);
+}
+
+.snake-help {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.snake-controls {
+  display: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.snake-control {
+  padding: 10px 0;
+}
+
+.snake-controls .snake-control[data-direction="up"] {
+  grid-column: 2;
+}
+
+.snake-controls .snake-control[data-direction="left"] {
+  grid-column: 1;
+}
+
+.snake-controls .snake-control[data-direction="down"] {
+  grid-column: 2;
+}
+
+.snake-controls .snake-control[data-direction="right"] {
+  grid-column: 3;
 }
 
 .game-meta {
@@ -477,5 +579,14 @@ button:hover {
 
   .game-meta {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .snake-board {
+    gap: 3px;
+    padding: 8px;
+  }
+
+  .snake-controls {
+    display: grid;
   }
 }

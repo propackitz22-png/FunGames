@@ -53,10 +53,10 @@
             </div>
           </div>
           <div class="queue-item">
-            <span class="badge muted">Soon</span>
+            <span class="badge">Now</span>
             <div>
               <p class="queue-title">Snake Sprint</p>
-              <p class="queue-subtitle">In design</p>
+              <p class="queue-subtitle">Solo classic</p>
             </div>
           </div>
           <div class="queue-item">
@@ -123,6 +123,55 @@
             </div>
           </div>
           <button class="primary full" type="button" id="ttt-focus">Play Tic Tac Toe</button>
+        </article>
+
+        <article class="game-card">
+          <div class="game-header">
+            <div>
+              <h3>Snake Sprint</h3>
+              <p>Eat, grow, and avoid the walls.</p>
+            </div>
+            <span class="pill">Ready</span>
+          </div>
+          <div class="game-preview">
+            <div class="mini-grid mini-snake">
+              <span></span><span></span><span class="snake-preview"></span>
+              <span></span><span class="snake-preview"></span><span class="food-preview"></span>
+              <span></span><span></span><span class="snake-preview"></span>
+            </div>
+          </div>
+          <div class="snake">
+            <div class="snake-header">
+              <p class="snake-status" id="snake-status">Score 0 • Running</p>
+              <div class="snake-actions">
+                <button class="ghost snake-toggle" id="snake-pause" type="button">Pause</button>
+                <button class="ghost snake-reset" id="snake-reset" type="button">Restart</button>
+              </div>
+            </div>
+            <div class="snake-board" id="snake-board" role="grid" aria-label="Snake board"></div>
+            <div class="snake-controls" id="snake-controls" aria-label="On-screen controls">
+              <button class="ghost snake-control" type="button" data-direction="up">Up</button>
+              <button class="ghost snake-control" type="button" data-direction="left">Left</button>
+              <button class="ghost snake-control" type="button" data-direction="down">Down</button>
+              <button class="ghost snake-control" type="button" data-direction="right">Right</button>
+            </div>
+            <p class="snake-help">Use arrow keys or WASD. Space pauses. R restarts.</p>
+          </div>
+          <div class="game-meta">
+            <div>
+              <p class="meta-label">Players</p>
+              <p class="meta-value">1</p>
+            </div>
+            <div>
+              <p class="meta-label">Mood</p>
+              <p class="meta-value">Focused</p>
+            </div>
+            <div>
+              <p class="meta-label">Length</p>
+              <p class="meta-value">1-3 min</p>
+            </div>
+          </div>
+          <button class="primary full" type="button" id="snake-focus">Play Snake</button>
         </article>
 
         <article class="game-card muted">
